@@ -1,0 +1,393 @@
+/* defaults */
+* {
+  box-sizing: border-box;
+	margin: 0;
+}
+
+/* navbar */
+.navbar-header {
+	display: flex;
+	max-height: 50px;
+	margin-bottom: 0;
+	
+	align-items: center; 
+	justify-content: space-between;
+	
+	background-color: white;
+	
+	font-variant: small-caps;
+}
+
+/* navbar style and logo */
+.logo {
+	width: 50px;
+	max-height: 50px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar-item {
+	text-align: right;
+  list-style-type: none;
+}
+
+.td-index .navbar-header ul li:first-child a, 
+.td-gallery .navbar-header ul li:nth-child(2) a,
+.td-contact .navbar-header ul li:nth-child(3) a {
+	text-align: center;
+	list-style-type: none;
+	
+	text-decoration: underline;
+}
+
+.navbar-item li,
+.navbar-item a {
+	color: black;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.navbar-item a,
+.navbar-item-active a {
+	text-decoration: none;
+	color: black;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* navbar behavior */
+.navbar-item a:hover {
+  color: white;
+  color: hsl(240deg, 100%, 50%);
+}
+  
+.navbar-item a:active {
+  color: white;
+  color: rgb(0, 0, 0);
+}
+
+.navbar-item-active a:hover {
+  color: white;
+  color: hsl(240deg, 100%, 50%);
+}
+  
+.navbar-item-active a:active {
+  color: white;
+  color: rgb(0, 0, 0);
+}
+
+/* main div */
+.wrapper {
+	display: flex;
+  flex-direction: column;
+	
+	min-height: 100vh;
+}
+
+.wrap {
+  margin: auto;
+  max-width: 40ch;
+  padding: 1.5em;
+
+
+  background-color: lightgray;
+  background-image: url(../img/bg-teamcard.jpg);
+  background-repeat: no-repeat;
+  background-size: 40ch 20ch;
+  box-shadow: 0 2px 2px 5px rgba(0, 255, 13, 0.2);
+  margin-bottom: 16px;
+}
+
+.contain {
+  display: flex;
+  flex-direction: row;
+}
+
+/* media query */
+@media screen and (max-width: 980px) {
+  .contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* header image */
+.header {
+  margin-top: 70px;
+  border: 7px solid lightgray;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header text & body text arrangement */
+.wrap > h2 {
+  text-align: center;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  padding-bottom: 10px;
+}
+
+.wrap > h4 {
+  padding-top: 20px;
+}
+
+.wrap > p {
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  padding-bottom: 10px;
+}
+
+/* card footer icons behavior */
+i:hover {
+  color: blue;
+}
+i:active {
+  color: black;
+}
+
+/* card footer arrangement */
+.icon {
+  margin: 0.7em;
+  padding: 0.3em;
+  color: black;
+}
+
+/* main content */
+.home {
+	flex: 1;
+	background-image: url(../img/bg-homepage.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.gallerypage {
+	flex: 1;
+	background-image: url(../img/bg-other.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.contact {
+	flex: 1;
+	background-image: url(../img/bg-other.jpg);
+	background-size: cover;
+  background-position: center;
+  padding-top: 40px;
+}
+
+.login {
+	flex: 1;
+	background-image: url(../img/bg-other.jpg);
+	background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+}
+
+.reg {
+  height: 100vh;
+  display: flex;
+
+	flex: 1;
+	background-image: url(../img/bg-other.jpg);
+	background-size: cover;
+  background-position: center;
+}
+
+.reg > * {
+  margin: auto;
+}
+
+.content {
+	margin: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.content > h1 {
+	margin: 0;
+
+	font-family: 'Passion One', Helvetica, sans-serif;
+	font-size: clamp(4rem, 10vw, 7rem);  /*clamp function*/
+	color: green;
+	text-shadow: 3px 3px white;
+
+  text-align: center;
+  padding-bottom: 50px;
+} 
+
+.content > p {
+	margin: auto;
+	max-width: 100%;
+
+	font-family: 'Montserrat Alternates', Helvetica, sans-serif;
+	font-size: clamp(1rem, 4vw, 3rem); /* clamp function */
+	color: white;
+	text-shadow: 3px 3px green;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery figure {
+  margin: 0.5em;
+  text-align: center;
+}
+
+figcaption {
+  width: 30ch;
+	color: white;
+	text-shadow: 2px 2px green;
+}
+
+@media screen and (max-width: 1000px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+/* form & content style */
+form {
+  font-size: 20px;
+  border: 2px solid black;
+  margin: auto;
+  max-width: 33ch;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.text-fields > h1 {
+  color: white;
+  font-size: 60px;
+}
+
+.required {
+  color: red;
+}
+
+legend {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+fieldset {
+  border: 0;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+fieldset ul {
+  margin-left: 2rem;
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+fieldset ul input {
+  height: 1rem;
+  width: 1rem;
+}
+
+input {
+  border: 1px solid black;
+}
+
+.text-fields p {
+  display: flex;
+  margin: auto;
+
+  font-family: 'Passion One', Helvetica, sans-serif;
+  font-size: 10px;
+  color: black;
+  width: max-content;
+  padding-bottom: 5px;
+  
+}
+
+.text-fields label {
+  width: 10ch;
+  font-size: 20px;
+}
+
+.text-fields p input {
+  flex: 1;
+}
+
+.select {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30ch;
+}
+
+textarea {
+  display: flex;
+  border: 1px solid black;
+}
+
+/* button style */
+.button {
+  text-align: center;
+  margin: 20px;
+  margin-top: 10px;
+}
+
+/* media query */
+@media screen and (max-width: 500px) {
+  .reg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg > h1 {
+    text-align: center;
+  }
+}
+
+.reg > h1 {
+  color: white;
+  font-size: 60px;
+  text-shadow: 3px 3px green;
+}
+
+.reg > p {
+  margin: auto;
+
+  font-family: 'Passion One', Helvetica, sans-serif;
+  font-size: 10px;
+  color: black;
+  width: max-content;
+  padding-bottom: 5px;
+}
+
+.foot {
+  border-top: 1px solid gray;
+  padding-top: 1em;
+}
+
+/* footer style */
+footer {
+	background-color: silver;
+	
+	text-align: center;
+	padding: 0.5rem;
+}
